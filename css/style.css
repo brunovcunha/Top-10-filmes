@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    background-color: #020202;
+    color: #fff;
+}
+
+body{
+    background-image: linear-gradient(#000, #000131);
+    height: 100%;
+}
+
+header {
+    padding: 10px;
+
+}
+
+#boxFilmes {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#filme {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: first baseline;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: rgba(163, 4, 4, 0.35) 0px 5px 15px;
+    background-image: linear-gradient(#000, #000131);
+    margin: 5px;
+    width: 250px;
+    text-align: center;
+}
+
+#filme p:first-child {
+    font-size: 20px;
+    margin: 5px;
+}
+
+#filme> p {
+    margin: 5px;
+}
+
+
+#filme img {
+    height: 300px;
+
+}
+
+header {
+    background-color: #000;
+    text-align: center;
+}
+
+.netpix{
+    width: 300px;
+}
+
+#infoFilme {
+    background-color: #0000007a;
+    position: absolute;
+    margin-top: 150px;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+#infoFilme p{
+    background-color: #00000000;
+    
+}
+
+#infoFilme:hover {
+    background-color: rgba(0, 0, 0, 0.623);
+    font-weight: bolder;
+    
+}
+
+#boxTotalFilmes{
+    width: 900px;
+    margin: auto;
+    box-shadow: rgba(163, 4, 4, 0.35) 0px 5px 15px;
+}
+
+#boxfilmeInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#boxTextoFilme {
+    padding: 10px;
+    margin-left: 20px;
+    
+}
+
+#boxTextoFilme p {
+    padding: 5px;
+    text-align: justify;
+}
+
+#boxTrailer{
+    width: 900px;
+    padding: 0px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+
+#exibeTrailer {
+    width: 900px;
+    height: 506px;
+    border: none;
+    margin: 10px;
+}
+
+
+
+
+
