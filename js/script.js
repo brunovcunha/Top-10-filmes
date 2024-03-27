@@ -1,4 +1,8 @@
 window.addEventListener('load', () => {
+    document.querySelector(".netpix").addEventListener("click", () => {
+        window.location.href = `index.html`;
+    });
+
     const options = {
         method: 'GET',
         headers: {
@@ -29,6 +33,8 @@ window.addEventListener('load', () => {
                 var verMais = document.createElement("p");
                 verMais.textContent = "Ver mais"
                 infoFilme.appendChild(verMais);
+
+
 
                 infoFilme.addEventListener('click', () => {
                     window.location.href = `filme.html?id=${filme.id}`;
@@ -76,9 +82,9 @@ window.addEventListener('load', () => {
                 const generosNomes = [];
                 ids.forEach(id => {
                     var generoNome = generosMap.get(id);
-                    if (generoNome) 
+                    if (generoNome)
                         generosNomes.push(generoNome);
-                    
+
                 });
 
                 return generosNomes;

@@ -2,6 +2,9 @@ window.addEventListener('load', () => {
     const urlId = new URLSearchParams(window.location.search);
     const filmeId = urlId.get('id');
     var language = 'pt-br';
+    document.querySelector(".netpix").addEventListener("click", () => {
+        window.location.href = `index.html`;
+    });
 
     const options = {
         method: 'GET',
@@ -33,7 +36,7 @@ window.addEventListener('load', () => {
         boxTextoFilme.appendChild(sinopseFilme);
         boxTextoFilme.appendChild(dataLancamentoFilme);
         boxTextoFilme.appendChild(avaliacao(filme));
-        
+
 
         var bannerFilme = document.createElement("img");
         var url = "https://image.tmdb.org/t/p/w500";
@@ -46,6 +49,14 @@ window.addEventListener('load', () => {
         caixaPrincipal.appendChild(boxInfoFilme);
         caixaPrincipal.appendChild(boxTextoFilme);
 
+
+        // Botao para voltar a página inicial
+        var btnVoltar = document.createElement("button");
+        btnVoltar.innerText = "Voltar";
+        btnVoltar.addEventListener("click", ()=>{window.location.href = `index.html`;});
+        document.getElementById("boxTotalFilmes").appendChild(btnVoltar);
+
+        // exibição do trailer
         var exibeTrailer = document.createElement("iframe");
         exibeTrailer.id = "exibeTrailer";
         exibeTrailer.setAttribute("src", trailer(filme));
@@ -56,9 +67,9 @@ window.addEventListener('load', () => {
     function avaliacao(filme) {
         var icon = document.createElement("img");
         icon.setAttribute("src", "https://creazilla-store.fra1.digitaloceanspaces.com/emojis/48193/popcorn-emoji-clipart-md.png");
-        const average =  Math.round(filme.vote_average * 100) / 10;
+        const average = Math.round(filme.vote_average * 100) / 10;
         var avaliacaoFilme = document.createElement("p");
-        avaliacaoFilme.innerText ="Avaliação: " + average + "%";
+        avaliacaoFilme.innerText = "Avaliação: " + average + "%";
 
         average > 60 ? avaliacaoFilme.style.color = "green" : avaliacaoFilme.style.color = "red";
 
@@ -68,7 +79,7 @@ window.addEventListener('load', () => {
         boxAvaliacao.appendChild(avaliacaoFilme);
 
         return boxAvaliacao;
-        
+
     }
 
     function dataLancamento(filme) {

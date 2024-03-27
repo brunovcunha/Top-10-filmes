@@ -18,6 +18,10 @@ header {
     padding: 10px;
 }
 
+.netpix {
+    cursor: pointer;
+}
+
 #boxFilmes {
     display: flex;
     flex-direction: row;
@@ -120,6 +124,36 @@ header {
     width: 40px;
 }
 
+#boxTotalFilmes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    background-color:#00012E;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    margin: auto;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color:#0003bb;
+    font-weight: 800;
+}
+
+button:active,
+button:focus {
+    background-color: #0056b3;
+    scale: 0.9;
+
+}
+
 #boxTrailer{
     width: 900px;
     padding: 0px;
@@ -136,6 +170,15 @@ header {
     height: 506px;
     border: none;
     margin: 10px;
+}
+
+
+footer{
+    height: 50px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (max-width: 900px) {
