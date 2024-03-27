@@ -16,7 +16,6 @@ body{
 
 header {
     padding: 10px;
-
 }
 
 #boxFilmes {
@@ -34,7 +33,7 @@ header {
     border: 1px solid #000;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: rgba(163, 4, 4, 0.35) 0px 5px 15px;
+    box-shadow: rgba(163, 4, 4, 0.548) 0px 5px 15px;
     background-image: linear-gradient(#000, #000131);
     margin: 5px;
     width: 250px;
@@ -108,6 +107,17 @@ header {
 #boxTextoFilme p {
     padding: 5px;
     text-align: justify;
+}
+
+#boxAvaliacao {
+    display: flex;
+    align-items: end;
+    padding: 0px;
+    margin: 5px;
+}
+
+#boxAvaliacao img{
+    width: 40px;
 }
 
 #boxTrailer{

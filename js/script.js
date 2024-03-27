@@ -30,7 +30,7 @@ window.addEventListener('load', () => {
                 verMais.textContent = "Ver mais"
                 infoFilme.appendChild(verMais);
 
-                verMais.addEventListener('click', () => {
+                infoFilme.addEventListener('click', () => {
                     window.location.href = `filme.html?id=${filme.id}`;
                 });
 

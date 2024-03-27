@@ -23,17 +23,17 @@ window.addEventListener('load', () => {
         boxTextoFilme.id = 'boxTextoFilme';
         var tituloFilme = document.createElement("h1");
         var sinopseFilme = document.createElement("p");
-        var avaliacaoFilme = document.createElement("p");
         var dataLancamentoFilme = document.createElement("p");
 
         tituloFilme.innerText = filme.title;
         sinopseFilme.innerText = filme.overview;
+
         dataLancamentoFilme.innerText = dataLancamento(filme);
-        avaliacaoFilme.innerText = avaliacao(filme);
         boxTextoFilme.appendChild(tituloFilme);
         boxTextoFilme.appendChild(sinopseFilme);
         boxTextoFilme.appendChild(dataLancamentoFilme);
-        boxTextoFilme.appendChild(avaliacaoFilme);
+        boxTextoFilme.appendChild(avaliacao(filme));
+        
 
         var bannerFilme = document.createElement("img");
         var url = "https://image.tmdb.org/t/p/w500";
@@ -54,8 +54,21 @@ window.addEventListener('load', () => {
     };
 
     function avaliacao(filme) {
-        const average = Math.round(filme.vote_average * 100) / 10;
-        return "Avaliação: " + average + " %";
+        var icon = document.createElement("img");
+        icon.setAttribute("src", "../img/popcorn.png");
+        const average =  Math.round(filme.vote_average * 100) / 10;
+        var avaliacaoFilme = document.createElement("p");
+        avaliacaoFilme.innerText ="Avaliação: " + average + "%";
+
+        average > 60 ? avaliacaoFilme.style.color = "green" : avaliacaoFilme.style.color = "red";
+
+        var boxAvaliacao = document.createElement("div");
+        boxAvaliacao.id = 'boxAvaliacao';
+        boxAvaliacao.appendChild(icon);
+        boxAvaliacao.appendChild(avaliacaoFilme);
+
+        return boxAvaliacao;
+        
     }
 
     function dataLancamento(filme) {
