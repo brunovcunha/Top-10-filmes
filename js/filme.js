@@ -20,6 +20,7 @@ window.addEventListener('load', () => {
         .catch(err => console.error(err));
 
     function exibirDetalhesFilme(filme) {
+        document.title = filme.title;
         var boxInfoFilme = document.createElement("div");
         boxInfoFilme.id = 'boxInfoFilme';
         var boxTextoFilme = document.createElement("div");
