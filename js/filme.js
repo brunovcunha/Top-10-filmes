@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
 
     function avaliacao(filme) {
         var icon = document.createElement("img");
-        icon.setAttribute("src", "../img/popcorn.png");
+        icon.setAttribute("src", "https://creazilla-store.fra1.digitaloceanspaces.com/emojis/48193/popcorn-emoji-clipart-md.png");
         const average =  Math.round(filme.vote_average * 100) / 10;
         var avaliacaoFilme = document.createElement("p");
         avaliacaoFilme.innerText ="Avaliação: " + average + "%";
