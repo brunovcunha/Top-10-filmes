@@ -138,6 +138,39 @@ header {
     margin: 10px;
 }
 
+@media (max-width: 900px) {
+    #boxTotalFilmes {
+        width: 100%;
+    }
+
+    #boxTotalFilmes img {
+        width: 100%;
+    }
+
+    #boxfilmeInfo {
+        flex-direction: column;
+    }
+
+    #boxTextoFilme {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    #boxAvaliacao img{
+        width: 40px;
+    }
+
+    #boxTrailer {
+        width: 100%;
+    }
+
+    #exibeTrailer {
+        width: 100%;
+    }
+
+}
+
+
 
 
 
